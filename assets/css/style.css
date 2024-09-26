@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  /* Centraliza os itens verticalmente */
+  justify-content: center;
+  /* Centraliza os itens horizontalmente */
+  gap: 20px;
+  /* Espaçamento fixo entre a imagem e o container */
+  max-width: 1000px;
+  /* Define uma largura máxima para o layout */
+  margin: 0 auto;
+  /* Centraliza o layout na tela */
+  padding: 20px;
+  /* Adiciona um pouco de padding para evitar que os elementos encostem nas bordas */
+}
+
+#imagem-container {
+  max-width: 45%;
+  /* Define a largura máxima da imagem */
+  display: flex;
+  justify-content: center;
+  /* Centraliza a imagem no container */
+  align-items: center;
+  /* Centraliza a imagem verticalmente */
+}
+
+#imagem-container img {
+  width: 100%;
+  /* A imagem ocupará 100% da largura do container */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  border-radius: 10px;
+  /* Bordas arredondadas para a imagem */
+}
+
+.container {
+  max-width: 50%;
+  /* Define o tamanho do container à direita */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centraliza o conteúdo dentro do container */
+  align-items: center;
+}
+
+form input,
+form label,
+form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+.bad {
+  background: rgb(112, 11, 11);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    /* Em telas pequenas, coloca a imagem em cima do container */
+  }
+
+  .imagem,
+  .container {
+    max-width: 100%;
+  }
+
+  .container {
+    margin-left: 0;
+    /* Remove a margem para telas pequenas */
+  }
+}
